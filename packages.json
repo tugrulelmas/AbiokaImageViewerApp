@@ -1,0 +1,27 @@
+{
+	"name": "AbiokaImageViewerApp",
+	"version": "1.0",
+	"description": "Beyaz yakalının, hizliresim ve imgur resimlerini görmesini sağlar.",
+	"main": "server.js",
+	"scripts": {
+		"start": "node server.js"
+	},
+	"dependencies": {
+    "express": "^4.12.4"
+	},
+	"engines": {
+		"node": "4.4.3"
+	},
+	"repository": {
+		"type": "git",
+		"url": "https://hyperdev.com/#!/project/welcome-project"
+	},
+	"keywords": [
+		"node",
+		"hyperdev",
+		"express",
+		"abioka",
+		"image"
+	],
+	"license": "MIT"
+}
