@@ -7,7 +7,7 @@
 		"start": "node server.js"
 	},
 	"dependencies": {
-    "express": "^4.12.4"
+    		"express": "^4.12.4"
 	},
 	"engines": {
 		"node": "4.4.3"
@@ -22,6 +22,9 @@
 		"express",
 		"abioka",
 		"image"
-	],
-	"license": "MIT"
+	],  
+	"license": {
+    		"type": "MIT",
+    		"url": "https://github.com/tugrulelmas/AbiokaImageViewerApp/blob/master/LICENSE"
+  	}
 }
