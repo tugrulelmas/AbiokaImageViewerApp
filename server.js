@@ -24,7 +24,8 @@ app.get("/image", function (request, response) {
       response.end();
     });
   }).on('error', function(e) {
-    console.log("Got error: " + e.message);
+    response.statusCode = 500
+    response.end(e.message);
   });
 });
 
