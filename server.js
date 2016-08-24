@@ -10,7 +10,7 @@ app.get("/", function (request, response) {
   client.get(url, function(res) {
     var contentType = res.headers['content-type'];
     if(contentType.indexOf('image/') === -1){
-      response.statusCode = 400
+      response.statusCode = 400;
       response.end(url + " is not an image.");
       return;
     }
@@ -26,7 +26,7 @@ app.get("/", function (request, response) {
       response.end();
     });
   }).on('error', function(e) {
-    response.statusCode = 500
+    response.statusCode = 500;
     response.end(e.message);
   });
 });
