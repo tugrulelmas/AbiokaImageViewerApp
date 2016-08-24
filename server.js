@@ -3,7 +3,7 @@ var http = require('http');
 var https = require('https');
 var app = express();
 
-app.get("/image", function (request, response) {
+app.get("/", function (request, response) {
   var url = request.query.url;
   
   var client = getRequestClient(url);
