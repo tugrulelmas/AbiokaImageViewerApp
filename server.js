@@ -23,12 +23,14 @@ app.get("/", function (request, response) {
   }
   var options = {"host": parsedUrl.host, 
     "path": parsedUrl.path, 
-    "port": parsedUrl.port
+    "port": parsedUrl.port,
+    "headers": {}
   };
-  if(request.headers["if-modified-since"] && request.headers['if-none-match']){
-    options.headers = {'if-modified-since': request.headers["if-modified-since"],
-      'if-none-match': request.headers['if-none-match']
-    };
+  if(request.headers["if-modified-since"]){
+    options.headers['if-modified-since'] = request.headers["if-modified-since"];
+  }
+  if(request.headers['if-none-match']){
+    options.headers['if-none-match'] = request.headers['if-none-match'];
   }
   var client = getRequestClient(parsedUrl);
   client.get(options, function(res) {
@@ -44,6 +46,7 @@ app.get("/", function (request, response) {
     setHeader(response, res, 'content-type');
     setHeader(response, res, 'content-length');
     setHeader(response, res, 'cache-control');
+    setHeader(response, res, 'age');
     setHeader(response, res, 'etag');
     setHeader(response, res, 'expires');
     setHeader(response, res, 'last-modified');
