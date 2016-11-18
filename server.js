@@ -51,9 +51,7 @@ app.get("/", function (request, response) {
     setHeader(response, res, 'expires');
     setHeader(response, res, 'last-modified');
         
-    if(res.statusCode === 304){
-      response.statusCode  = 304;
-    }
+    response.statusCode  = res.statusCode;
     
     res.on("data", function(chunk) {
       response.write(chunk);
