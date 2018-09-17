@@ -4,7 +4,7 @@ var https = require('https');
 var url = require("url");
 var app = express();
 
-var validHosts = ["imgur.com", "hizliresim.com", "pbs.twimg.com", "postimg.org", "tinypic.com"];
+var validHosts = ["imgur.com", "hizliresim.com", "pbs.twimg.com", "postimg.org", "tinypic.com", "eksiup.com"];
 
 app.get("/", function (request, response) {
   var requestUrl = request.query.url;
